@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "npx prisma generate && npx prisma db push --accept-data-loss && node src/server.js",
+    "start": "NODE_ENV=\"development\" node --env-file .env --watch src/server.js",
     "test": "jest --setupFiles dotenv/config"
   },
   "dependencies": {
